@@ -163,7 +163,7 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
         src="audio/theme.mp3"
         title="Nuestra canción"
         artist="Evelyn Bahamonde Carrión"
-        cover="/assets/1.jpg"
+        cover="/assets/inicio.jpg"
       />
 
       <style jsx global>{`
@@ -207,7 +207,7 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
 
       <div className="mx-auto max-w-[640px] bg-white/70 shadow-[0_0_36px_rgba(55,51,53,0.06)]">
         {/* 1 — Hero */}
-        <HeroCover src="/assets/1.jpg" alt="Evelyn Bahamonde Carrión">
+        <HeroCover src="/assets/inicio.jpg" alt="Evelyn Bahamonde Carrión">
           <div className="no-auto-resize">
             <h1 className={`text-center text-[64px] sm:text-[100px] ${mr_de_haviland.className} text-white drop-shadow`}>
               Evelyn Gabriela Bahamonde Carrión
@@ -339,22 +339,22 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
             ].join(" ")}
           >
             <div
-              className="
-        relative
-        z-10
-        bg-white/90
-        px-4
-        pb-8
-        pt-20
-        text-center
-        ring-1
-        ring-[#E8E0DD]/80
-        shadow-[0_12px_36px_rgba(55,51,53,0.07)]
-        backdrop-saturate-150
-        sm:px-6
-        sm:pt-16
-      "
-            >
+        className={`
+          relative
+          z-10
+          bg-white/90
+          px-4
+          pb-8
+          pt-20
+          text-center
+          ring-1
+          ring-[#E8E0DD]/80
+          shadow-[0_12px_36px_rgba(55,51,53,0.07)]
+          backdrop-saturate-150
+          sm:px-6
+          sm:pt-16
+        `}
+      >
               <Image
                 src="/blue_leaves.png"
                 alt=""
@@ -460,7 +460,7 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
               className="relative mt-0 w-full aspect-[16/10] overflow-hidden"
               style={{ backgroundColor: SOFT_BG_CARD, boxShadow: "0 8px 20px rgba(55,51,53,0.07)" }}
             >
-              <Image src="/assets/3.jpg" alt="Momentos" fill sizes="100vw" className="object-cover" loading="lazy" />
+              <Image src="/assets/momentos1.jpg" alt="Momentos" fill sizes="100vw" className="object-cover" loading="lazy" />
             </div>
           </section>
         </RevealSection>
@@ -489,7 +489,7 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
 
               <div className="relative px-6 py-2 [--rose:clamp(90px,34vw,200px)] sm:[--rose:clamp(72px,22vw,180px)]">
                 <Image
-                  src="/blueroses.png"
+                  src="/redroses.png"
                   alt=""
                   width={240}
                   height={240}
@@ -500,8 +500,8 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
                     transform: "translateY(-50%)",
                     width: "var(--rose)",
                     height: "auto",
-                    filter: RED_DECORATION_FILTER,
-                    opacity: 0.74,
+
+
                   }}
                   priority={false}
                 />
@@ -526,7 +526,7 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
               style={{ backgroundColor: SOFT_BG_CARD, boxShadow: "0 8px 20px rgba(55,51,53,0.07)" }}
             >
               <Image
-                src="/assets/10.jpg"
+                src="/assets/momentos2.jpg"
                 alt="Momentos"
                 fill sizes="100vw"
                 className="object-cover"
@@ -556,12 +556,13 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
             <GalleryCarousel
               aspect={4 / 3}
               images={[
+                { src: "/assets/1.jpg", alt: "Foto 1", objectPosition: "50% 40%"  },
+                { src: "/assets/2.jpg", alt: "Foto 2", objectPosition: "50% 20%" },
+                { src: "/assets/3.jpg", alt: "Foto 3" },
+                { src: "/assets/4.jpg", alt: "Foto 4", objectPosition: "50% 10%" },
                 { src: "/assets/5.jpg", alt: "Foto 5" },
                 { src: "/assets/6.jpg", alt: "Foto 6" },
-                { src: "/assets/7.jpg", alt: "Foto 7", objectPosition: "50% 30%" },
-                { src: "/assets/8.jpg", alt: "Foto 8", objectPosition: "50% 60%" },
-                { src: "/assets/9.jpg", alt: "Foto 9" },
-
+                { src: "/assets/7.jpg", alt: "Foto 7" },
               ]}
               className={`${cormorant.className} text-3xl text-[#373335]`}
             />
@@ -614,9 +615,9 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
 
         {/* 12 — Cierre */}
         <RevealSection>
-          <HeroCover src="/assets/11.jpg" alt="Nos vemos pronto" objectPosition="60% 20%">
+          <HeroCover src="/assets/cierre.jpg" alt="Nos vemos pronto" objectPosition="60% 20%">
             <h1 className={`text-center text-5xl sm:text-8xl ${greatVibes.className} text-white drop-shadow`}>
-              ¡Nos vemos en mis 15 años!
+              ¡Nos vemos en mi fiesta!
             </h1>
           </HeroCover>
         </RevealSection>
