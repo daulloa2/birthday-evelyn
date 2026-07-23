@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Tangerine, Inter } from "next/font/google";
 
-export const metadata: Metadata = { title: "Nuestro Sí para toda la vida" };
+export const metadata: Metadata = { title: "Mis 15 primaveras" };
 
 // Paleta base para layout
 const SOFT_BG_APP = "#F7FBFE";
