@@ -94,16 +94,6 @@ export default function DressCode({
             Formal
           </p>
 
-          <Image
-            src={DRESS_IMAGE}
-            alt="Vestimenta formal sugerida para el evento"
-            width={110}
-            height={110}
-            className="pointer-events-none mx-auto mt-3 select-none"
-            style={{ height: "auto" }}
-            priority={false}
-          />
-
           <div className="mt-4 flex flex-col items-center gap-3">
             <p
               className={`

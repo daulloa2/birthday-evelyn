@@ -50,7 +50,7 @@ const DECORATION_FILTER =
   "brightness(0) saturate(100%) invert(25%) sepia(18%) saturate(1850%) hue-rotate(305deg) brightness(88%) contrast(86%)";
 
 const CORNER_TOP = "/blueleaves.png";
-const CORNER_BOTTOM = "/blueroses.png";
+const CORNER_BOTTOM = "/redroses.png";
 
 export default function BankAccountsDialog({
   open,
@@ -123,8 +123,7 @@ export default function BankAccountsDialog({
           style={{
             width: "10rem",
             height: "auto",
-            opacity: 0.58,
-            filter: DECORATION_FILTER,
+            opacity: 0.78,
             transform: "rotate(180deg)",
           }}
           priority={false}

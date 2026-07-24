@@ -212,6 +212,7 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
             <h1 className={`text-center text-[64px] sm:text-[100px] ${mr_de_haviland.className} text-white drop-shadow`}>
               Evelyn Gabriela Bahamonde Carrión
             </h1>
+            <p className={`mt-2 text-center text-white/90 text-[44px] sm:text-[50px] ${mr_de_haviland.className}`}>¡Mis 15 años!</p>
           </div>
 
         </HeroCover>
@@ -227,7 +228,7 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
               }}
             >
               <Image
-                src="/blue_horizontal.png"
+                src="/red_horizontal.png"
                 alt=""
                 aria-hidden
                 width={320}
@@ -240,25 +241,24 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
                   width: "var(--garland)",
                   height: "auto",
                   opacity: 0.68,
-                  filter: RED_DECORATION_FILTER,
                 }}
                 priority={false}
               />
               <Image
-                src="/blue_horizontal.png"
+                src="/red_horizontal.png"
                 alt=""
                 aria-hidden
                 width={320}
                 height={120}
                 className="pointer-events-none select-none absolute z-0"
                 style={{
-                  bottom: "5%",
+                  bottom: "10%",
                   left: "50%",
                   transform: "translate(-50%, 30%)",
                   width: "var(--garland)",
                   height: "auto",
                   opacity: 0.68,
-                  filter: RED_DECORATION_FILTER,
+                  
                 }}
                 priority={false}
               />
@@ -447,7 +447,7 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
                 >
                   María del Cisne Armijos Carrión
                   <br />
-                  Carlos Rolando Tapia Tapia
+                  Carlos Rolando Tapia López
                 </p>
               </div>
             </div>
@@ -543,10 +543,11 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
             titleClassName={`${mea_culpa.className} text-4xl`}
             captionClassName={`${rougeScript.className} text-[25px] sm:text-[29px]`}
             womenColors={[
-              { color: "#6E3038", name: "Rojo vino oscuro" },
-              { color: "#8C3F49", name: "Rojo vino" },
-              { color: "#B05D67", name: "Rojo rosado" },
-              { color: "#D39BA1", name: "Rosa rojizo" },
+              { color: "#FF2E2E", name: "Rojo 1" },
+              { color: "#FF0000", name: "Rojo 2" },
+              { color: "#D10000", name: "Rojo 3" },
+              { color: "#A30000", name: "Rojo 4" },
+              { color: "#750000", name: "Rojo 5" },
             ]}
           />
         </RevealSection>

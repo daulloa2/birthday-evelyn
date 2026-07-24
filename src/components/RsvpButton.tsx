@@ -568,24 +568,6 @@ export default function RsvpButton({
               {greeting}
             </div>
 
-            {typeof selected?.invitados?.total ===
-              "number" && (
-              <div
-                className={`
-                  mt-1
-                  text-center
-                  text-xl
-                  ${titleClassName}
-                `}
-                style={{ color: COLORS.muted }}
-              >
-                Pase válido para{" "}
-                {personasLabel(
-                  selected.invitados.total
-                )}
-              </div>
-            )}
-
             <div
               className="mx-auto mt-3 h-px w-24"
               style={{
