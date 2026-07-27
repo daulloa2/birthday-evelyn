@@ -460,7 +460,7 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
               className="relative mt-0 w-full aspect-[16/10] overflow-hidden"
               style={{ backgroundColor: SOFT_BG_CARD, boxShadow: "0 8px 20px rgba(55,51,53,0.07)" }}
             >
-              <Image src="/assets/momentos1.jpg" alt="Momentos" fill sizes="100vw" className="object-cover" loading="lazy" />
+              <Image src="/assets/momentos1.png" alt="Momentos" fill sizes="100vw" className="object-cover" loading="lazy" />
             </div>
           </section>
         </RevealSection>
@@ -518,25 +518,7 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
             </div>
           </section>
         </RevealSection>
-        {/* 6 — Imagen */}
-        <RevealSection>
-          <section className="grid gap-4">
-            <div
-              className="relative mt-0 w-full aspect-[16/10] overflow-hidden"
-              style={{ backgroundColor: SOFT_BG_CARD, boxShadow: "0 8px 20px rgba(55,51,53,0.07)" }}
-            >
-              <Image
-                src="/assets/momentos2.jpg"
-                alt="Momentos"
-                fill sizes="100vw"
-                className="object-cover"
-                loading="lazy"
-              />
-            </div>
-          </section>
-        </RevealSection>
-
-
+        
         {/* 7 — DressCode */}
         <RevealSection>
           <DressCode
@@ -577,10 +559,10 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
             itemClassName={`${rougeScript.className} text-[26px] sm:text-[33px]`}
             accounts={[
               {
-                bank: "Banco del Austro",
-                holder: "Daniel Esteban Castanier Palacios",
-                account: "0400549877",
-                dni: "0107517088",
+                bank: "Banco Pichincha",
+                holder: "Evelyn Gabriela Bahamonde Carrión",
+                account: "2216180963",
+                dni: "1150099008",
               },
             ]}
           />
