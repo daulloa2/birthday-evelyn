@@ -4,10 +4,12 @@
 import * as React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+// 👇 Importamos la X normal
 import {
   CalendarHeart,
   CheckCircle2,
   XCircle,
+  X,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -61,8 +63,8 @@ const COLORS = {
 const DECORATION_FILTER =
   "brightness(0) saturate(100%) invert(25%) sepia(18%) saturate(1850%) hue-rotate(305deg) brightness(88%) contrast(86%)";
 
-const CORNER_TOP = "/blueleaves.png";
-const CORNER_BOTTOM = "/blueroses.png";
+const CORNER_TOP = "/redleaves.png";
+const CORNER_BOTTOM = "/redroses.png";
 
 type Family = {
   id: string;
@@ -453,6 +455,15 @@ export default function RsvpButton({
               "0 18px 50px rgba(55,51,53,0.13)",
           }}
         >
+          {/* 👇 Botón de cierre forzado. Sin outline ni focus:ring para que no salga el círculo al presionarlo */}
+          <button
+            onClick={() => setOpen(false)}
+            className="absolute right-4 top-4 z-50 grid size-8 place-items-center rounded-full bg-white/40 text-gray-500 transition-colors hover:bg-white/80 hover:text-gray-800 outline-none focus:outline-none"
+            aria-label="Cerrar"
+          >
+            
+          </button>
+
           <Image
             src={CORNER_TOP}
             alt=""
@@ -462,16 +473,15 @@ export default function RsvpButton({
             className="
               pointer-events-none
               absolute
-              right-[-10%]
-              top-[-8%]
+              right-[-5%]
+              top-[-5%]
               select-none
             "
             style={{
-              width: "10rem",
+              width: "12rem",
               height: "auto",
-              opacity: 0.55,
-              filter: DECORATION_FILTER,
-              transform: "rotate(8deg)",
+              opacity: 0.85,
+              transform: "rotate(28deg)",
             }}
             priority={false}
           />
@@ -492,8 +502,6 @@ export default function RsvpButton({
             style={{
               width: "10rem",
               height: "auto",
-              opacity: 0.55,
-              filter: DECORATION_FILTER,
               transform: "rotate(180deg)",
             }}
             priority={false}
@@ -567,24 +575,6 @@ export default function RsvpButton({
             >
               {greeting}
             </div>
-
-            {typeof selected?.invitados?.total ===
-              "number" && (
-              <div
-                className={`
-                  mt-1
-                  text-center
-                  text-xl
-                  ${titleClassName}
-                `}
-                style={{ color: COLORS.muted }}
-              >
-                Pase válido para{" "}
-                {personasLabel(
-                  selected.invitados.total
-                )}
-              </div>
-            )}
 
             <div
               className="mx-auto mt-3 h-px w-24"

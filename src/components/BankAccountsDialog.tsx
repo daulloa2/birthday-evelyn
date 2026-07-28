@@ -47,10 +47,10 @@ const COLORS = {
 } as const;
 
 const DECORATION_FILTER =
-  "brightness(0) saturate(100%) invert(25%) sepia(18%) saturate(1850%) hue-rotate(305deg) brightness(88%) contrast(86%)";
+  "brightness(30) saturate(100%) invert(25%) sepia(18%) saturate(1850%) hue-rotate(305deg) brightness(88%) contrast(86%)";
 
-const CORNER_TOP = "/blueleaves.png";
-const CORNER_BOTTOM = "/blueroses.png";
+const CORNER_TOP = "/redleaves.png";
+const CORNER_BOTTOM = "/redroses.png";
 
 export default function BankAccountsDialog({
   open,
@@ -71,6 +71,9 @@ export default function BankAccountsDialog({
           border
           p-0
           sm:max-w-2xl
+          [&>button]:z-50
+          [&>button]:outline-none
+          [&>button]:focus:ring-0
         "
         style={{
           borderColor: COLORS.border,
@@ -97,11 +100,10 @@ export default function BankAccountsDialog({
             select-none
           "
           style={{
-            width: "10rem",
+            width: "12rem",
             height: "auto",
-            opacity: 0.58,
-            filter: DECORATION_FILTER,
-            transform: "rotate(8deg)",
+            opacity: 0.88,
+            transform: "rotate(-88deg)",
           }}
           priority={false}
         />
@@ -123,8 +125,7 @@ export default function BankAccountsDialog({
           style={{
             width: "10rem",
             height: "auto",
-            opacity: 0.58,
-            filter: DECORATION_FILTER,
+            opacity: 0.78,
             transform: "rotate(180deg)",
           }}
           priority={false}
@@ -183,7 +184,13 @@ export default function BankAccountsDialog({
         </DialogHeader>
 
         <div className="relative z-10 px-5 pb-6">
-          <ul className="grid gap-4 sm:grid-cols-2">
+          <ul
+            className={`grid gap-4 ${
+              accounts.length === 1
+                ? "mx-auto w-full max-w-sm"
+                : "sm:grid-cols-2"
+            }`}
+          >
             {accounts.map((account) => (
               <li
                 key={`${account.bank}-${account.account}`}
