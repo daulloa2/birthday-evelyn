@@ -34,6 +34,7 @@ type VenueBlockProps = {
   name: string;
   address?: string;
   time?: string;
+  mapUrl: string;
   className?: string;
 };
 
@@ -42,6 +43,7 @@ export default function VenueBlock({
   name,
   address,
   time,
+  mapUrl,
   className = "",
 }: VenueBlockProps) {
   return (
@@ -128,6 +130,29 @@ export default function VenueBlock({
               {address}
             </p>
           )}
+          <div className="mt-5">
+            <a
+              href={mapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Ver ${name} en el mapa`}
+              className="inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-semibold transition"
+              style={{
+                background: "linear-gradient(180deg, rgba(255,255,255,0.86), rgba(245,243,255,0.92))",
+                border: "1px solid var(--border)",
+                color: "var(--ink)",
+                boxShadow: "0 10px 22px rgba(167,139,250,0.14)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-1px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0px)";
+              }}
+            >
+              Ver mapa
+            </a>
+          </div>
         </div>
       </div>
     </section>

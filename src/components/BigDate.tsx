@@ -52,7 +52,7 @@ export default function BigDate({
     text: "#4A4446",
     number: "#353033",
     border: "#DED4D2",
-    centerBorder: "#D8C4C7",
+    centerBorder: "#D10000",
   };
 
   return (
@@ -63,7 +63,7 @@ export default function BigDate({
         {/* Día de la semana */}
         <div
           className="border-y py-3 text-center"
-          style={{ borderColor: colors.border }}
+          style={{ borderColor: colors.centerBorder }}
         >
           <span
             className={`
@@ -154,7 +154,7 @@ export default function BigDate({
         {/* Mes */}
         <div
           className="border-y py-3 text-center"
-          style={{ borderColor: colors.border }}
+          style={{ borderColor: colors.centerBorder }}
         >
           <span
             className={`

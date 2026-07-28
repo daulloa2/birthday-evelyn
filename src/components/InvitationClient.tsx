@@ -74,7 +74,7 @@ const GalleryCarousel = dynamic(
     ),
   }
 );
-const WEDDING_DATE = new Date("2026-08-08T17:00:00");
+const WEDDING_DATE = new Date("2026-08-09T17:00:00");
 
 const CHURCH_NAME = "Iglesia Santa Teresita del cantón Olmedo";
 //const CHURCH_MAPS_URL = "https://maps.app.goo.gl/YRyZSh5wyinbugAH9";
@@ -163,7 +163,7 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
         src="audio/theme.mp3"
         title="Nuestra canción"
         artist="Evelyn Bahamonde Carrión"
-        cover="/assets/inicio.jpg"
+        cover="/assets/inicio.png"
       />
 
       <style jsx global>{`
@@ -207,14 +207,23 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
 
       <div className="mx-auto max-w-[640px] bg-white/70 shadow-[0_0_36px_rgba(55,51,53,0.06)]">
         {/* 1 — Hero */}
-        <HeroCover src="/assets/inicio.jpg" alt="Evelyn Bahamonde Carrión">
+        <HeroCover
+          src="/assets/inicio.png"
+          alt="Evelyn Bahamonde Carrión"
+          topContent={
+            <div className="no-auto-resize">
+              <p className={`text-center text-white/90 text-[64px] sm:text-[100px] ${mr_de_haviland.className}`}>
+                ¡Mis 15 años!
+              </p>
+            </div>
+          }
+        >
+          {/* Lo que pongas aquí adentro (children) se irá abajo automáticamente */}
           <div className="no-auto-resize">
             <h1 className={`text-center text-[64px] sm:text-[100px] ${mr_de_haviland.className} text-white drop-shadow`}>
               Evelyn Gabriela Bahamonde Carrión
             </h1>
-            <p className={`mt-2 text-center text-white/90 text-[44px] sm:text-[50px] ${mr_de_haviland.className}`}>¡Mis 15 años!</p>
           </div>
-
         </HeroCover>
         {/* 10 — Cita (hoja blanca) */}
         <RevealSection>
@@ -240,7 +249,6 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
                   transform: "translate(-50%, -30%)",
                   width: "var(--garland)",
                   height: "auto",
-                  opacity: 0.68,
                 }}
                 priority={false}
               />
@@ -257,8 +265,6 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
                   transform: "translate(-50%, 30%)",
                   width: "var(--garland)",
                   height: "auto",
-                  opacity: 0.68,
-                  
                 }}
                 priority={false}
               />
@@ -339,7 +345,7 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
             ].join(" ")}
           >
             <div
-        className={`
+              className={`
           relative
           z-10
           bg-white/90
@@ -354,9 +360,9 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
           sm:px-6
           sm:pt-16
         `}
-      >
+            >
               <Image
-                src="/blue_leaves.png"
+                src="/red_leaves.png"
                 alt=""
                 aria-hidden
                 width={360}
@@ -367,9 +373,9 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
                   height: "auto",
                   top: 0,
                   left: 0,
-                  transform: "translate(-10%, -10%)",
-                  filter: RED_DECORATION_FILTER,
-                  opacity: 0.68,
+                  transform: "translate(-5%, -25%) scaleY(-1)",
+                  rotate: "-15deg",
+
                 }}
                 priority={false}
               />
@@ -484,6 +490,7 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
                   name={CHURCH_NAME}
                   address=""
                   time="05:00 PM"
+                  mapUrl="https://maps.app.goo.gl/CZZBH5ouMDSJ1uji6?g_st=iw"
                 />
               </div>
 
@@ -512,13 +519,14 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
                   title="Recepción"
                   name={RECEPTION_NAME}
                   address=""
-                  time="06:00 PM"
+                  time="07:00 PM"
+                  mapUrl="https://maps.app.goo.gl/Qgpi6xBVwd92y4UD8?g_st=iw"
                 />
               </div>
             </div>
           </section>
         </RevealSection>
-        
+
         {/* 7 — DressCode */}
         <RevealSection>
           <DressCode
@@ -539,7 +547,7 @@ export default function InvitationClient({ familyIdFromUrl }: { familyIdFromUrl?
             <GalleryCarousel
               aspect={4 / 3}
               images={[
-                { src: "/assets/1.jpg", alt: "Foto 1", objectPosition: "50% 40%"  },
+                { src: "/assets/1.jpg", alt: "Foto 1", objectPosition: "50% 40%" },
                 { src: "/assets/2.jpg", alt: "Foto 2", objectPosition: "50% 20%" },
                 { src: "/assets/3.jpg", alt: "Foto 3" },
                 { src: "/assets/4.jpg", alt: "Foto 4", objectPosition: "50% 10%" },

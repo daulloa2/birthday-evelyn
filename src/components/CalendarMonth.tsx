@@ -1,12 +1,13 @@
 // components/CalendarMonth.tsx
 "use client";
 
-import { Heart } from "lucide-react";
+import { Crown } from "lucide-react";
 
 const COLORS = {
   text: "#373335",
   muted: "#6D6668",
   border: "#DDD6D2",
+  heart: "#D10000",
   highlight: "#B98A90",
   highlightText: "#373335",
 } as const;
@@ -113,18 +114,18 @@ export default function CalendarMonth({
                 ) : (
                   <div className="relative grid h-8 w-8 place-items-center sm:h-9 sm:w-9">
                     {isHighlight && (
-                      <Heart
+                      <Crown
                         aria-hidden
                         className="
                           pointer-events-none
                           absolute
                           z-0
-                          size-8
+                          size-7
                           fill-current
-                          sm:size-9
+                          sm:size-8
                         "
                         style={{
-                          color: COLORS.highlight,
+                          color: COLORS.heart,
                           transform: "scale(1.35)",
                         }}
                       />

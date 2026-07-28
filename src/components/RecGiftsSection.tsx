@@ -62,7 +62,7 @@ export default function RecGiftsSection({
     >
       {/* Decoración */}
       <Image
-        src="/blueleaves.png"
+        src="/red_leaves.png"
         alt=""
         width={400}
         height={400}
@@ -70,7 +70,7 @@ export default function RecGiftsSection({
         className="
           pointer-events-none
           absolute
-          right-[calc(-0.30_*_var(--corner))]
+          right-[calc(-0.25_*_var(--corner))]
           z-0
           select-none
           sm:top-[calc(-0.01_*_var(--corner))]
@@ -78,8 +78,7 @@ export default function RecGiftsSection({
         style={{
           width: "var(--corner)",
           height: "auto",
-          filter: DECORATION_FILTER,
-          opacity: 0.68,
+          rotate: "-75deg",
         }}
         priority={false}
       />

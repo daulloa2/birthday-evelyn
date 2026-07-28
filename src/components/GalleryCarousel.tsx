@@ -33,7 +33,7 @@ type GalleryCarouselProps = {
 
 const COLORS = {
   text: "#373335",
-  primary: "#8C3F49",
+  primary: "#D10000",
   border: "#DDD6D2",
   controlBackground: "rgba(255,255,255,0.92)",
   controlBackgroundHover: "rgba(255,255,255,1)",
